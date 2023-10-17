@@ -1,88 +1,81 @@
 * {
-    font-family: 'Open Sans', sans-serif;
-}
-
-body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
     background-color: #ffffff;
     min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container {
+  }
+  
+  .container {
     background-color: #131313;
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    border-radius: 20px;
+    padding: 25px 35px;
+    border-radius: 15px;
+    user-select: none;
   }
-
-#Display-area {
+  
+  #Display-area {
     width: 100%;
     margin: 3vh 0;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(2, minmax(40px, auto));
+    grid-template-rows: repeat(2,minmax(50px,auto));
     word-wrap: break-word;
     padding-bottom: 20px;
     border-bottom: 1px rgba(128, 128, 128, 0.116) solid;
-}
+  }
+ #Display-area .currentInput {
+    text-align: right;
+    color: white;
+    height: 8vh;
+    font-size: xx-large;
+    word-wrap: break-word;
+    line-height: 2;
+ }
+ #Display-area .answerScreen {
+    text-align: right;
+    height: 8vh;
+    color: rgba(150, 150, 150, 0.87);
+    line-height: 3;
+    font-size: larger;
+ }
 
-#Display-area .currentInput {
-/* display: flex; */
-text-align: right;
-height: 8vh;
-color: white;
-font-size: xx-large;
-line-height: 2;
-word-wrap: break-word;
-}
-
-#Display-area .answerScreen {
-text-align: right;
-color: rgba(150, 150, 150, 0.87);
-height: 7px;
-line-height: 3;
-font-size: larger;
-}
-
-.keypad-btns {
-display: grid;
-grid: repeat(5, 70px) / repeat(4, 70px);
-grid-row-gap: 20px;
-grid-column-gap: 20px;
+.keypad-btns{
+    display: grid;
+    grid: repeat(5, 60px) / repeat(4, 60px);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
 }
 
 .keypad-btns button {
-outline: none;
-border: none;
-border-radius: 20px;
-background-color: #474b6b;
-color: #fff;
-font-size: x-large;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    color: 072541;
 }
 
-.keypad-btns .fun_btn {
-color: #000;
-background: #ffc652;
-font-weight: bold;
+.keypad-btns .function-button {
+    background-color: #FBE555;
+    font-weight: bold;
 }
-
-.number-button:hover {
-background-color: #282a3a;
+.keypad-btns .number-button {
+    background-color: #2A1A5E;
+    color: white;
 }
 
 .function-button:hover {
-background-color: #ffab00;
+    background-color: #E74646;
 }
-
-@media only screen and (max-width: 600px) {
-body {
-    background-color: #131313;
-    align-items: flex-start;
-}
+.number-button:hover {
+    background-color: #2C3333;
 }
